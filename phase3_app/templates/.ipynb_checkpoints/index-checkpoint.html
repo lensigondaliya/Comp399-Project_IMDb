@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IMDb Movie Popularity Predictor</title>
+</head>
+<body>
+    <h1>IMDb Movie Popularity Predictor</h1>
+    <p>Enter movie details to predict popularity</p>
+
+    <form method="POST">
+        Duration (minutes): <input type="text" name="duration"><br><br>
+        Votes: <input type="text" name="votes"><br><br>
+        Year: <input type="text" name="year"><br><br>
+        Reviews from Users: <input type="text" name="reviews_from_users"><br><br>
+        Reviews from Critics: <input type="text" name="reviews_from_critics"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
